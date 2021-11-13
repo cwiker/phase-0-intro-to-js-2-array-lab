@@ -1,71 +1,37 @@
 const cats = ["Milo", "Otis", "Garfield"];
 
-
 beforeEach(function () {
-    cats.length = 0;
-  
-    cats.push("Milo", "Otis", "Garfield");
-  });
+  cats.length = 0;
 
+  cats.push('Milo', 'Otis', 'Garfield');
+});
 
+function destructivelyAppendCat(Ralph) {
 cats.push("Ralph");
+}
 
-beforeEach(function () {
-    cats.length = 0;
-  
-    cats.push("Milo", "Otis", "Garfield");
-  });
-
+function destructivelyPrependCat(Bob) {
 cats.unshift("Bob");
-
-beforeEach(function () {
-    cats.length = 0;
-  
-    cats.push("Milo", "Otis", "Garfield");
-  });
-
-cats.pop([2]);
-
-beforeEach(function () {
-    cats.length = 0;
-  
-    cats.push("Milo", "Otis", "Garfield");
-  });
-
-cats.shift([0]);
-
-beforeEach(function () {
-    cats.length = 0;
-  
-    cats.push("Milo", "Otis", "Garfield");
-  });
-
-function(cats) {
-    return (cats.push("Broom")); {
-    cats.concat();
-    }
 }
 
-beforeEach(function () {
-    cats.length = 0;
-  
-    cats.push("Milo", "Otis", "Garfield");
-  });
-
-function(cats) {
-    return (cats.unshift("Arnold")); {
-    cats.concat();
-    }
+function destructivelyRemoveLastCat(Garfield) {
+cats.pop(2);
 }
 
-beforeEach(function () {
-    cats.length = 0;
-  
-    cats.push("Milo", "Otis", "Garfield");
-  });
+function destructivelyRemoveFirstCat(Milo) {
+cats.shift(0);
+}
 
-  function(cats) {
-      return (cats.pop(2)); {
-        
-      }
-  }
+function appendCat(Broom) {
+  const cats1 = [...cats, "Broom"];
+  return cats1;
+}
+
+function prependCat(Arnold) {
+  const cats2 = ["Arnold", ...cats];
+  return cats2;
+}
+
+function removeLastCat(Garfield) {
+return cats.splice("Garfield");
+}

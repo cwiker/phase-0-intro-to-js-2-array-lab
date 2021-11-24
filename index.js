@@ -33,5 +33,9 @@ function prependCat(Arnold) {
 }
 
 function removeLastCat(Garfield) {
-return cats.splice("Garfield");
+  return cats.slice(0, cats.length -1);
+}
+
+function removeFirstCat(Milo) {
+  return cats.slice(cats.length - 2);
 }
